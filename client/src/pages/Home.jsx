@@ -183,10 +183,12 @@ export default function Home() {
               kofeiKnigi@mail.ru
             </a>
           </p>
-          <p className='text-sm'>
-            График работы: пн–пт: 8:00 – 19:00
+          <p className='text-sm md:text-base font-medium text-center text-gray-700 bg-gray-100 rounded-lg p-2 mt-4 leading-snug shadow-inner'>
+            График работы:{' '}
+            <span className='font-semibold'>пн, вт, ср, чт, пт:</span> 8:00 -
+            19:00
             <br />
-            сб–вс: 8:00 – 16:00
+            <span className='font-semibold'>сб, вс:</span> 8:00 - 16:00
           </p>
         </div>
       </section>
