@@ -36,8 +36,6 @@ export default function Menu() {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-8 text-center">Меню</h1>
-      
-      {/* Фильтры */}
       <div className="flex flex-wrap justify-center space-x-4 mb-8">
         <select value={category} onChange={e => setCategory(e.target.value)} className="p-2 border rounded">
           {categoryOptions.map(cat => <option key={cat.value} value={cat.value}>{cat.label}</option>)}
@@ -47,7 +45,6 @@ export default function Menu() {
         </select>
       </div>
 
-      {/* Элементы меню */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredItems.length > 0 ? (
           filteredItems.map((item, idx) => (

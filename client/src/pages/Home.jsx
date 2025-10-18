@@ -7,7 +7,7 @@ import axios from 'axios';
 export default function Home() {
   const [reviews, setReviews] = useState([]);
   const [reviewData, setReviewData] = useState({ name: '', review: '' });
-  const [loading, setLoading] = useState(false); 
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     axios
@@ -30,7 +30,10 @@ export default function Home() {
 
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:5000/api/reviews', reviewData);
+      const res = await axios.post(
+        'http://localhost:5000/api/reviews',
+        reviewData
+      );
       setReviews([res.data, ...reviews]);
       setReviewData({ name: '', review: '' });
       alert('Отзыв успешно отправлен!');
@@ -48,32 +51,28 @@ export default function Home() {
     <div className='container mx-auto px-4 py-8'>
       {/* Описание */}
       <section className='text-center mb-8 space-y-8'>
-        <div className='relative mx-auto w-full aspect-[4/3] rounded-lg overflow-hidden shadow-lg'>
-          <img
-            src='/images/home_img1.jpg'
-            alt='Описание кофейни'
-            className='w-full h-full object-cover bg-amber-50 opacity-80'
-            loading='lazy'
-            aria-hidden='true'
-            onError={(e) => {
-              e.target.src = '/images/logo.webp';
-              e.target.className =
-                'w-full h-full object-cover object-center bg-amber-50 opacity-80';
-            }}
-          />
-          <div className='absolute inset-0 flex items-center justify-center hover:bg-opacity-50 transition-all'>
-            <div className='flex flex-col gap-3 px-4'>
-              <h1 className='text-5xl font-bold  text-amber-800 drop-shadow-2xl z-10 text-center'>
-                Кофейня “Кофе и Книги”
-              </h1>
-              <p className='text-xl font-bold text-white  leading-relaxed text-center max-w-2xl'>
-                Наша кофейня — это гармоничное пространство, где каждый гость
-                может погрузиться в мир любимых книг за чашечкой ароматного
-                кофе, наслаждаясь атмосферой спокойствия и умиротворения.
-              </p>
-            </div>
-          </div>
+        <div className='text-center z-10'>
+          <h1 className='text-4xl font-bold text-amber-800 drop-shadow-2xl mb-2'>
+            Кофейня
+          </h1>
+          <span
+            className='
+        block
+        text-5xl font-extrabold
+        text-transparent
+        bg-clip-text
+        bg-gradient-to-r from-amber-800 via-amber-500 to-yellow-300
+        drop-shadow-2xl
+      '
+          >
+            “Кофе и Книги”
+          </span>
         </div>
+        <p className='text-xl font-bold text-gray-800 leading-relaxed text-center max-w-2xl mx-auto'>
+          Наша кофейня — это гармоничное пространство, где каждый гость может
+          погрузиться в мир любимых книг за чашечкой ароматного кофе,
+          наслаждаясь атмосферой спокойствия и умиротворения.
+        </p>
 
         <div className='max-w-2xl mx-auto space-y-4'>
           <img
@@ -131,7 +130,10 @@ export default function Home() {
         </div>
 
         {/* Форма отзыва */}
-        <form onSubmit={handleSubmit} className='mt-8 max-w-md mx-auto space-y-4'>
+        <form
+          onSubmit={handleSubmit}
+          className='mt-8 max-w-md mx-auto space-y-4'
+        >
           <input
             type='text'
             name='name'
@@ -149,9 +151,9 @@ export default function Home() {
             className='w-full p-2 border rounded min-h-[100px]'
             required
           ></textarea>
-          <button 
-            type='submit' 
-            className='btn-primary w-full disabled:opacity-50' 
+          <button
+            type='submit'
+            className='btn-primary w-full disabled:opacity-50'
             disabled={loading}
           >
             {loading ? 'Отправка...' : 'Отправить'}
@@ -160,20 +162,30 @@ export default function Home() {
       </section>
 
       {/* Контакты */}
-      <section className="text-center my-8">
-        <h2 className="text-2xl font-bold mb-6 text-gray-800">Контакты</h2>
-        <div className="space-y-3 text-gray-700 max-w-md mx-auto">
-          <p className="font-semibold">
+      <section className='text-center my-8'>
+        <h2 className='text-2xl font-bold mb-6 text-gray-800'>Контакты</h2>
+        <div className='space-y-3 text-gray-700 max-w-md mx-auto'>
+          <p className='font-semibold'>
             Адрес: г. Калуга, ул. Автозаводская, 15
           </p>
-          <p className="font-semibold">
-            Тел: <a href="tel:89561230005" className="text-blue-600 hover:underline">8-956-123-00-05</a>
+          <p className='font-semibold'>
+            Тел:{' '}
+            <a href='tel:89561230005' className='text-blue-600 hover:underline'>
+              8-956-123-00-05
+            </a>
           </p>
-          <p className="font-semibold">
-            Email: <a href="mailto:kofeiKnigi@mail.ru" className="text-blue-600 hover:underline">kofeiKnigi@mail.ru</a>
+          <p className='font-semibold'>
+            Email:{' '}
+            <a
+              href='mailto:kofeiKnigi@mail.ru'
+              className='text-blue-600 hover:underline'
+            >
+              kofeiKnigi@mail.ru
+            </a>
           </p>
-          <p className="text-sm">
-            График работы: пн–пт: 8:00 – 19:00<br />
+          <p className='text-sm'>
+            График работы: пн–пт: 8:00 – 19:00
+            <br />
             сб–вс: 8:00 – 16:00
           </p>
         </div>

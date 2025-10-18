@@ -1,15 +1,21 @@
-const express = require('express')
-const Booking = require('../models/Booking')
-const router = express.Router()
+const express = require('express');
+const router = express.Router();
+const Booking = require('../models/Booking');
 
 router.post('/', async (req, res) => {
-  const booking = new Booking(req.body)
   try {
-    const newBooking = await booking.save()
-    res.status(201).json(newBooking)
-  } catch (err) {
-    res.status(400).json({ message: err.message })
-  }
-})
+    const { date, time } = req.body;
 
-module.exports = router
+    const exists = await Booking.findOne({ date, time });
+    if (exists) {
+      return res.status(409).json({ message: 'На это время уже есть бронь!' });
+    }
+
+    const booking = await Booking.create(req.body);
+    res.status(201).json({ message: 'Бронирование создано!', booking });
+  } catch (err) {
+    res.status(500).json({ message: 'Ошибка сервера', error: err.toString() });
+  }
+});
+
+module.exports = router;
