@@ -1,0 +1,146 @@
+[{
+  "_id": {
+    "$oid": "68f36d2877adbd5f5c0c4bd1"
+  },
+  "id": "coffee-1",
+  "category": "coffee",
+  "name": "Эспрессо",
+  "description": "Классический итальянский эспрессо, 30 мл. Состав: молотый кофе, вода.",
+  "ingredients": "Кофе 100%",
+  "price": 150,
+  "img": "/uploads/espresso.jpg",
+  "tags": []
+},
+{
+  "_id": {
+    "$oid": "68f36d2877adbd5f5c0c4bd2"
+  },
+  "id": "coffee-2",
+  "category": "coffee",
+  "name": "Капучино",
+  "description": "Эспрессо с нежной молочной пеной. Состав: кофе, молоко.",
+  "ingredients": "Кофе, молоко",
+  "price": 200,
+  "img": "/uploads/coffe1.jpg",
+  "tags": [
+    "lactose"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68f36d2877adbd5f5c0c4bd3"
+  },
+  "id": "coffee-3",
+  "category": "coffee",
+  "name": "Лавандовый латте",
+  "description": "Ароматный латте с лавандовым сиропом. Состав: кофе, молоко, сироп лаванды.",
+  "ingredients": "Кофе, молоко, лавандовый сироп",
+  "price": 250,
+  "img": "/uploads/lavender-latte.jpg",
+  "tags": [
+    "lactose"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68f36d2877adbd5f5c0c4bd4"
+  },
+  "id": "dessert-1",
+  "category": "desserts",
+  "name": "Морковный кекс (Веган)",
+  "description": "Нежный морковный кекс без продуктов животного происхождения.",
+  "ingredients": "Морковь, мука, растительное масло, сахар",
+  "price": 180,
+  "img": "/uploads/vegan-carrot-cake.jpg",
+  "tags": [
+    "vegan",
+    "lactose-free"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68f36d2877adbd5f5c0c4bd5"
+  },
+  "id": "dessert-2",
+  "category": "desserts",
+  "name": "Шоколадный торт",
+  "description": "Сочный торт с прослойкой из шоколадного крема.",
+  "ingredients": "Мука, какао, молоко, яйца, сахар",
+  "price": 220,
+  "img": "/uploads/chocolate-cake.jpg",
+  "tags": [
+    "lactose"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68f36d2877adbd5f5c0c4bd6"
+  },
+  "id": "dessert-3",
+  "category": "desserts",
+  "name": "Чизкейк классический",
+  "description": "Кремовый сырный чизкейк на песочном корже.",
+  "ingredients": "Творожный сыр, яйца, сахар, печенье",
+  "price": 230,
+  "img": "/uploads/cheesecake.jpg",
+  "tags": [
+    "lactose"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68f36d2877adbd5f5c0c4bd7"
+  },
+  "id": "breakfast-1",
+  "category": "breakfast",
+  "name": "Брускета с лососем ",
+  "description": "Брускета с малосольным лососем и яйцом пашот",
+  "ingredients": "Хлеб, яйцо, лосось",
+  "price": 160,
+  "img": "/uploads/brusketa.jpg",
+  "tags": [
+    "",
+    "lactose-free"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68f36d2877adbd5f5c0c4bd8"
+  },
+  "id": "breakfast-2",
+  "category": "breakfast",
+  "name": "Сырники с вареньем",
+  "description": "Классические домашние сырники, подаются с клубничным вареньем.",
+  "ingredients": "Творог, яйца, мука, сахар",
+  "price": 190,
+  "img": "/images/menu/syrniki.jpg",
+  "tags": [
+    "lactose"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68f36d2877adbd5f5c0c4bd9"
+  },
+  "id": "book-1",
+  "category": "books",
+  "name": "«Маленький принц» Антуан де Сент-Экзюпери",
+  "description": "Культовая книга для взрослых и детей на французском и русском языках.",
+  "ingredients": "",
+  "price": 400,
+  "img": "/images/menu/little-prince.jpg",
+  "tags": []
+},
+{
+  "_id": {
+    "$oid": "68f36d2877adbd5f5c0c4bda"
+  },
+  "id": "book-2",
+  "category": "books",
+  "name": "«1984» Джордж Оруэлл",
+  "description": "Классика антиутопии на русском языке.",
+  "ingredients": "",
+  "price": 450,
+  "img": "/images/menu/1984.jpg",
+  "tags": []
+}]

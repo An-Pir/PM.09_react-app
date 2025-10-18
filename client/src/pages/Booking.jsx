@@ -33,7 +33,7 @@ export default function Booking() {
 
   return (
     <div className='container mx-auto px-4 py-8'>
-      <h1 className='text-3xl font-bold mb-8 text-center'>
+      <h1 className='text-3xl md:text-3xl font-extrabold mb-2 text-center text-amber-900 tracking-wide drop-shadow-lg  py-2'>
         Бронирование столика
       </h1>
       <form onSubmit={handleSubmit} className='max-w-md mx-auto space-y-4'>

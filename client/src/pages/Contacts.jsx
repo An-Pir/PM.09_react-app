@@ -30,7 +30,7 @@ export default function Contacts() {
 
   return (
     <div className='container mx-auto px-4 py-8'>
-      <h1 className='text-3xl font-bold mb-8 text-center'>Контакты</h1>
+      <h1 className='text-3xl md:text-3xl font-extrabold mb-2 text-center text-amber-900 tracking-wide drop-shadow-lg  py-2'>Контакты</h1>
 
       {/* Карта */}
       <section className='mb-8'>
@@ -51,7 +51,7 @@ export default function Contacts() {
               p-8 
             '
         >
-          <h2 className='text-2xl sm:text-3xl font-extrabold text-center text-amber-600 mb-6 tracking-wide drop-shadow'>
+          <h2 className='text-2xl md:text-3xl font-extrabold mb-2 text-center text-amber-900 tracking-wide drop-shadow-lg  py-2'>
             Вы можете оставить для нас сообщение
           </h2>
           <form className='space-y-4' onSubmit={handleSubmit}>
@@ -90,7 +90,7 @@ export default function Contacts() {
 
         {/* График работы */}
         <section className='mt-8 text-center'>
-          <h2 className='text-3xl font-bold mb-4 text-black'>График работы:</h2>
+          <h2 className='text-2xl md:text-3xl font-extrabold mb-2 text-center text-amber-900 tracking-wide drop-shadow-lg  py-2'>График работы:</h2>
           <p className='text-2xl font-bold mb-4 text-amber-800'>
             Пн-Пт: 8:00 - 22:00
           </p>

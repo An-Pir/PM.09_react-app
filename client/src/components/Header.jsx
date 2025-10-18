@@ -15,12 +15,10 @@ export default function Header() {
     { to: '/contacts', label: 'Контакты' }
   ];
 
-  // ⏬ Закрытие меню при кликах вне него
   useEffect(() => {
     if (!open) return; // не ставим обработчик если меню закрыто
 
     function handleClick(e) {
-      // клик по кнопке или навигации — меню не сворачиваем
       if (
         navRef.current?.contains(e.target) ||
         buttonRef.current?.contains(e.target)

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // 👈 добавим useNavigate
+import { useNavigate } from 'react-router-dom'; 
 import axios from 'axios';
 
 function isISOStr(str) {
@@ -10,7 +10,7 @@ export default function Slider() {
   const [slides, setSlides] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loading, setLoading] = useState(true);
-  const navigate = useNavigate(); // 👈 хук навигации
+  const navigate = useNavigate();
 
   useEffect(() => {
     const loadData = async () => {
@@ -29,9 +29,8 @@ export default function Slider() {
           .sort((a, b) => new Date(a.date) - new Date(b.date))
           .slice(0, 5);
 
-        // добавляем id к слайду
         const eventSlides = futureEvents.map((event) => ({
-          id: event._id || event.id, // поддерживаем разные API-имена
+          id: event._id || event.id, 
           type: 'event',
           title: event.title,
           desc: `${event.date} в ${event.time || 'Время уточняется'} | ${
@@ -67,7 +66,6 @@ export default function Slider() {
     loadData();
   }, []);
 
-  // таймер слайдов
   useEffect(() => {
     if (slides.length <= 1) return;
     const interval = setInterval(() => {

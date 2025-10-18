@@ -18,7 +18,7 @@ app.use('/api/events', require('./routes/events'));
 app.use('/api/reviews', require('./routes/reviews'));
 app.use('/uploads', express.static('uploads'));
 app.use('/api/upload', require('./routes/upload'));
-app.use('/api/messages', require('./routes/messages'))
+app.use('/api/messages', require('./routes/messages'));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Сервер запущен на порту ${PORT}`));

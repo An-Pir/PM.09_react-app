@@ -35,7 +35,7 @@ export default function Menu() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8 text-center">Меню</h1>
+      <h1 className="text-3xl md:text-3xl font-extrabold mb-2 text-center text-amber-900 tracking-wide drop-shadow-lg  py-2">Меню</h1>
       <div className="flex flex-wrap justify-center space-x-4 mb-8">
         <select value={category} onChange={e => setCategory(e.target.value)} className="p-2 border rounded">
           {categoryOptions.map(cat => <option key={cat.value} value={cat.value}>{cat.label}</option>)}

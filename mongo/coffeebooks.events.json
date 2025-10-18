@@ -1,0 +1,112 @@
+[{
+  "_id": {
+    "$oid": "68f35b0477adbd5f5c0c4bc2"
+  },
+  "category": "Встречи с авторами",
+  "title": "Творческая встреча с Леной Сокол",
+  "date": "2025-10-18",
+  "time": "11:30",
+  "location": "Библиотека им. Н.А. Некрасова",
+  "description": "«Как стать автором молодежных бестселлеров»",
+  "notes": null,
+  "format": "Открытая беседа с автором",
+  "organizer": null
+},
+{
+  "_id": {
+    "$oid": "68f35b0477adbd5f5c0c4bc3"
+  },
+  "category": "Встречи с авторами",
+  "title": "Встреча с Асей Лавринович",
+  "date": "2025-10-18",
+  "time": "13:00",
+  "location": "Библиотека им. Н.А. Некрасова",
+  "description": "«О том, как писать истории о первой любви»",
+  "notes": "Требуется предварительная регистрация",
+  "format": null,
+  "organizer": null
+},
+{
+  "_id": {
+    "$oid": "68f35b0477adbd5f5c0c4bc4"
+  },
+  "category": "Встречи с авторами",
+  "title": "Беседа с Ксенией Горбуновой",
+  "date": "2025-10-18",
+  "time": "13:00",
+  "location": "ЦМДБ им. М. Горького",
+  "description": "«Где рождаются добрые истории»",
+  "notes": null,
+  "format": null,
+  "organizer": null
+},
+{
+  "_id": {
+    "$oid": "68f35b0477adbd5f5c0c4bc5"
+  },
+  "category": "Мастер-классы",
+  "title": "Мастер-класс «Осенняя закладка для книг»",
+  "date": "2025-10-18",
+  "time": "18:00",
+  "location": null,
+  "description": null,
+  "notes": null,
+  "format": null,
+  "organizer": "«Арт-мастерская»"
+},
+{
+  "_id": {
+    "$oid": "68f35b0477adbd5f5c0c4bc6"
+  },
+  "category": "Мастер-классы",
+  "title": "Мастер-класс «Ручка-перо»",
+  "date": "2025-10-19",
+  "time": "14:30",
+  "location": "Библиотека им. Н.А. Некрасова",
+  "description": null,
+  "notes": null,
+  "format": null,
+  "organizer": null
+},
+{
+  "_id": {
+    "$oid": "68f35b0477adbd5f5c0c4bc7"
+  },
+  "category": "Мастер-классы",
+  "title": "Мастер-класс «Ёжик идет в гости»",
+  "date": "2025-10-19",
+  "time": "11:00",
+  "location": null,
+  "description": null,
+  "notes": "Необходима предварительная регистрация",
+  "format": null,
+  "organizer": null
+},
+{
+  "_id": {
+    "$oid": "68f35b0477adbd5f5c0c4bc8"
+  },
+  "category": "Литературные мероприятия",
+  "title": "Презентация альманаха «Действующие лица»",
+  "date": "2025-10-18",
+  "time": "14:30",
+  "location": null,
+  "description": null,
+  "notes": null,
+  "format": null,
+  "organizer": "Ведущая: Писательница Евгения Некрасова"
+},
+{
+  "_id": {
+    "$oid": "68f35b0477adbd5f5c0c4bc9"
+  },
+  "category": "Литературные мероприятия",
+  "title": "Литературный праздник",
+  "date": null,
+  "time": "15:00",
+  "location": "ЦМДБ им. М. Горького",
+  "description": "Подведение итогов конкурса, награждение победителей",
+  "notes": null,
+  "format": null,
+  "organizer": null
+}]
