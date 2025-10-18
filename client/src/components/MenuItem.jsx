@@ -1,11 +1,17 @@
+const fallbackImg = '/logo.svg'; // Положи файл logo.svg в public/ или заменяй путь
+
 export default function MenuItem({ item }) {
   return (
     <div className="bg-white border border-gray-200 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow flex flex-col">
       <div className="relative">
         <img
-          src={`http://localhost:5000${item.img}`}
+          src={ item.img ? `http://localhost:5000${item.img}` : fallbackImg }
           alt={item.name}
           className="w-full h-56 object-cover rounded-t-2xl"
+          onError={e => {
+            e.target.onerror = null; // чтобы не зациклиться
+            e.target.src = fallbackImg; // показать логотип
+          }}
         />
         {/* Шильдик категория в уголку */}
         {item.category && (
@@ -31,30 +37,4 @@ export default function MenuItem({ item }) {
         {/* Тэги */}
         {item.tags && item.tags.length > 0 && (
           <div className="mb-3 flex flex-wrap gap-1">
-            {item.tags.map((tag, idx) => (
-              <span
-                key={tag + idx}
-                className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded mr-1"
-              >
-                {tag === "vegan"
-                  ? "Веганское"
-                  : tag === "lactose-free"
-                  ? "Без лактозы"
-                  : tag}
-              </span>
-            ))}
-          </div>
-        )}
-        <div className="flex items-center justify-between mt-auto">
-          <span className="text-2xl font-bold text-blue-600">{item.price} ₽</span>
-          <button
-            className="ml-2 py-1 px-4 bg-amber-500 hover:bg-amber-800 text-white font-semibold rounded-lg transition-colors shadow"
-            type="button"
-          >
-            Заказать
-          </button>
-        </div>
-      </div>
-    </div>
-  )
-}
+            {item.tags.map
